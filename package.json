@@ -1,5 +1,29 @@
 {
   "devDependencies": {
-    "@types/node": "^20.10.4"
-  }
+    "@types/node": "^20.10.4",
+    "nodemon": "^3.0.2"
+  },
+  "name": "node_practice",
+  "description": "practice node.js",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "undici-types": "^5.26.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start_server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradjjc/practice_node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bradjjc/practice_node/issues"
+  },
+  "homepage": "https://github.com/bradjjc/practice_node#readme"
 }
