@@ -11,7 +11,8 @@ const products = [];
 // /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
     // __dirname 우리 운영체제의 절대 경로를 이 프로젝트 폴더로 고정해주는 변수 __dirname route 폴더를 가르킴
-    res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+    // res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
+    res.render('add-product', {pageTitle: 'Shop'});
 });
 
 // /admin/add-product => POST
