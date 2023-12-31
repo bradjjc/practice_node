@@ -1,33 +1,23 @@
 {
-  "devDependencies": {
-    "@types/node": "^20.10.4",
-    "nodemon": "^3.0.2"
-  },
-  "name": "node_practice",
-  "description": "practice node.js",
+  "name": "nodejs-complete-guide",
   "version": "1.0.0",
+  "description": "Complete Node.js Guide",
   "main": "app.js",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "express-handlebars": "^7.1.2",
-    "pug": "^3.0.2",
-    "undici-types": "^5.26.5"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "start_server": "node app.js"
+    "start-server": "node app.js"
   },
-  "author": "",
+  "author": "Maximilian Schwarzmüller",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bradjjc/practice_node.git"
+  "devDependencies": {
+    "nodemon": "^1.18.3"
   },
-  "bugs": {
-    "url": "https://github.com/bradjjc/practice_node/issues"
-  },
-  "homepage": "https://github.com/bradjjc/practice_node#readme"
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "pug": "^2.0.3"
+  }
 }
