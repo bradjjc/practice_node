@@ -1,3 +1,4 @@
+const { request } = require('express');
 const Product = require('../models/product');
 
 exports.getAddProduct = (req, res, next) => {
@@ -20,16 +21,11 @@ exports.postAddProduct = (req, res, next) => {
     imageUrl: imageUrl,
     description: description,
   }).then(result => {
-    // console.log(result);
     console.log('Created Product');
     return res.redirect('/');
   }).catch(err => {
     console.log(err);
-  });;
-  // Product.create({
-
-  // })
-    
+  });
 };
 
 exports.getEditProduct = (req, res, next) => {
@@ -38,7 +34,8 @@ exports.getEditProduct = (req, res, next) => {
     return res.redirect('/');
   }
   const prodId = req.params.productId;
-  Product.findAll({where: {id: prodId}})
+  req.user.getProducts({where: {id: prodId}})
+  // Product.findAll({where: {id: prodId}})
     .then(product => {
       if (!product) {
         return res.redirect('/');
@@ -75,7 +72,8 @@ exports.postEditProduct = (req, res, next) => {
 };
 
 exports.getProducts = (req, res, next) => {
-  Product.findAll()
+  req.user.getProducts()
+  // Product.findAll()
     .then(products => {
       res.render('admin/products', {
         prods: products,
